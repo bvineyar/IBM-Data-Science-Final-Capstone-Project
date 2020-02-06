@@ -418,6 +418,34 @@ dataframe = json_normalize(venues)
 dataframe.head()
 ```
 ![JSON dataframe](JSON2.jpg)
+
+#### Let's look at data for Hotels within 500 meters of the Richard Rodgers Theatre
+```Python
+# keep only columns that include venue name, and anything that is associated with location
+filtered_columns2 = ['name', 'categories'] + [col for col in dataframe.columns if col.startswith('location.')] + ['id']
+dataframe_filtered2 = dataframe.loc[:, filtered_columns2]
+
+# function that extracts the category of the venue
+def get_category_type(row):
+    try:
+        categories_list = row['categories']
+    except:
+        categories_list = row['venue.categories']
+        
+    if len(categories_list) == 0:
+        return None
+    else:
+        return categories_list[0]['name']
+
+# filter the category for each row
+dataframe_filtered2['categories'] = dataframe_filtered2.apply(get_category_type, axis=1)
+
+# clean column names by keeping only last term
+dataframe_filtered2.columns = [column.split('.')[-1] for column in dataframe_filtered2.columns]
+
+dataframe_filtered2
+```
+![Hotels Dataframe Filtered](df_filtered.jpg)
 ---
 ## 5. Restaurants Near the Broadway Theatre District and citizenM Hotel <a name="restaurants-5"></a>
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
