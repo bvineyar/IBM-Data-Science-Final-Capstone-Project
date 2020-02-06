@@ -229,7 +229,9 @@ for lat, lng, label in zip(manhattan_data['Latitude'], manhattan_data['Longitude
 map_manhattan
 ```
 ![map of Manhattan Neighborhoods](manhattan_neighborhoods.jpg)
-**Manhattan, New York with markers for the 40 neighborhoods, and the TKTS booth near Times Square marked in red.**
+
+**Manhattan's 40 neighborhoods, with TKTS booth near Times Square marked in red.**
+
 ---
 ## 3. Broadway Theatres and Current Productions <a name="broadway-3"></a>
 ## Theatres on Broadway - Maps and Analysis ##
