@@ -485,7 +485,7 @@ for lat, lng, label in zip(dataframe_filtered2['lat'], dataframe_filtered2['lng'
     
 map_hotels
 ```
-![Hotel Map](Hotels_map.jpg)
+![Hotel Map](hotels_map.jpg)
 ---
 ## 5. Restaurants Near the Broadway Theatre District and citizenM Hotel <a name="restaurants-5"></a>
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
