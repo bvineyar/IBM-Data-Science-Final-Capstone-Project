@@ -85,6 +85,8 @@ The coordinates will be passed to the Foursquare Places API, for querying New Yo
    - [Map of Restaurants Near Broadway Theatres](#rest_map)
  6. [Conclusions and Findings](#conclusions)
  
+ ---
+ 
 ## 1. Import Libraries, Foursquare Credentials, and Neighborhood Data <a name="import-1"></a>
 
 The first step in the project was to import libraries:
@@ -121,7 +123,7 @@ CLIENT_SECRET = credentials['CLIENT_SECRET']
 VERSION = '20180604'
 LIMIT = 30
 ```
-
+---
 ## 2. New York's Manhattan Borough Neighborhood Data <a name="borough-2"></a>
 
 Data for New York City's five boroughs and 306 neighborhoods were imported as a JSON file from 2014 data on NYU's website: https://geo.nyu.edu/catalog/nyu-2451-34572
@@ -155,7 +157,7 @@ map_newyork
 
 ### Map of Neighborhoods in NYC's Manhattan Borough <a name="neighbor-map"></a>
 ![Map of Neighborhoods in NYC](NewYorkNeighborhoods.jpg)
-
+---
 ## 3. Broadway Theatres and Current Productions <a name="broadway-3"></a>
 ## Theatres on Broadway - Maps and Analysis ##
 
@@ -237,20 +239,29 @@ The data was then cleaned by removing some columns, such as City, State, OwnerOp
 # Let's drop some of the columns that aren't needed
 Theatre_Data_df.drop(['OwnerOperator','Opening','Closing'],axis=1)
 ```
-Next the data was downloaded 
+The results at this stage looked like this:
 
+![TheatreTable2](theatre_table_2)
+
+Next the data was downloaded to Excel, with more data cleaning for the address and show title fields. Also City, State, and Latitude and Longitude coordinates for the theatres was added.
+
+Here is a view of the final table:
+
+![TheatreTableFinal](theatre_table_final)
 
 ```Python
 
 ```
-
+---
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
 ### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
+---
 ## 5. Restaurants Near the Broadway Theatre District and citizenM Hotel <a name="restaurants-5"></a>
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
+---
 ## 6. Conclusions and Findings <a name="conclusions"></a>
 
-## RESULTS
 
-## CONCLUSION
+
+
 
