@@ -154,7 +154,50 @@ map_newyork
 ```
 
 ### Map of Neighborhoods in NYC's Manhattan Borough <a name="neighbor-map"></a>
+![Map of Neighborhoods in NYC](NewYorkNeighborhoods.jpg)
+
 ## 3. Broadway Theatres and Current Productions <a name="broadway-3"></a>
+## Theatres on Broadway - Maps and Analysis ##
+
+Data on the 40 theatres currently showing Broadway productions was pulled in from a Broadway Theatre wiki page.
+
+**Some of the most popular shows at the time of this project are**:
+![Shows](shows.jpg)
+
+Let's start by using BeautifulSoup to parse a list of the theatres and currently running shows from the following Wikipedia page:
+https://en.wikipedia.org/wiki/Broadway_theatre
+
+BeautifulSoup Code to Scrape Theatre Data
+
+```Python
+# Use Beautiful Soup to get the theatre data from the wiki page
+sourcelink = 'https://en.wikipedia.org/wiki/Broadway_theatre'
+source = requests.get(sourcelink).text
+soup = BeautifulSoup(source, 'html.parser')
+print(soup.prettify())
+```
+This returns the HTML code for the Wiki page. 
+
+```Python
+# Build dataframe with theatre data
+
+Theatre_Data_df = pd.DataFrame({'Theatre':'',
+                          'Address':'',
+                          'City':'',
+                          'State':'', 
+                          'Capacity':int(),
+                          'OwnerOperator':'',
+                          'CurrentProduction':'',
+                          'Type':'',
+                          'Opening':'',
+                          'Closing':'',
+}, 
+             index=[1])
+```
+
+
+
+
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
 ### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
 ## 5. Restaurants Near the Broadway Theatre District and citizenM Hotel <a name="restaurants-5"></a>
