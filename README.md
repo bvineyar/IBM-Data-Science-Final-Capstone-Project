@@ -194,8 +194,57 @@ Theatre_Data_df = pd.DataFrame({'Theatre':'',
 }, 
              index=[1])
 ```
+```Python
+# Build theatres table from matching table on the theatres wiki page and view the HTML code
+theatres_table = soup.find('table', {'class':'wikitable sortable'})
+theatres_table
+```
+```Python
+# Initialize values for dataframe fields
+Theatre = 0
+Address = 0
+Capacity = 0
+OwnerOperator = 0
+CurrentProduction = 0
+Type = 0
+Opening = 0
+Closing = 0
+
+for tr in theatres_table.find_all('tr'):
+    i = 0
+    for td in tr.find_all('td'):
+        if i == 0:
+            Theatre = td.text
+            i = i + 1
+        elif i == 1:
+            Address = td.text
+            i = i + 1
+        elif i == 2:
+            Capacity = td.text
+            i = i + 1
+        elif i == 3:
+            Owner_Operator = td.text
+            i = i + 1
+        elif i == 4:
+            CurrentProduction = td.text
+            i = i + 1
+        elif i == 5:
+            Type = td.text
+            i = i + 1
+        elif i == 6:
+            Opening = td.text
+            i = i + 1
+        elif i == 7:
+            Closing = td.text.strip('\n').replace(']','')
+            i = i + 1        
+            Theatre_Data_df = Theatre_Data_df.append({'Theatre': Theatre,'Address': Address,'Capacity': Capacity, 'OwnerOperator': Owner_Operator, 'CurrentProduction': CurrentProduction, 'Type': Type, 'Opening': Opening, 'Closing': Closing},ignore_index=True)
+```
+This returns data for 40 theatres with the current productions on Broadway.
 
 
+```Python
+
+```
 
 
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
