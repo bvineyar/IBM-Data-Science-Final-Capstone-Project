@@ -1,4 +1,4 @@
-#  IBM Data Science Capstone Project 
+#  IBM Data Science Capstone Project Report
 ## Planning Travel and Tours in New York City's Broadway Theatre District
 ### Comparison of Hotels, Restaurants, and Theaters in Manhattan, NY for a Broadway Theater Trip
 ### Brian Vineyard 
