@@ -504,10 +504,22 @@ result = requests.get(url).json()
 print(result['response']['venue'].keys())
 result['response']['venue']
 ```
+![citizenM_results](citizenM_dict.jpg)
+```
 
-```
 ```Python
+try:
+    print(result['response']['venue']['rating'])
+except:
+    print('This venue has not been rated yet.')
 ```
+9.2
+
+Further analysis revealed this 9.2 score for the citizenM Hotel was based on 412 ratings, so this hotel looks like an excellent choice for our travel package. 
+
+There were also 83 tips for the hotel in Foursquare, but due to limitations on the free Foursquare Developer account used for testing, the details for only a single tip can be returned and viewed.
+
+![citizenM_tip](tip.jpg)
 ```
 ```Python
 ```
