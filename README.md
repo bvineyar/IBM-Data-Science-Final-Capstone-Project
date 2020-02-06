@@ -545,10 +545,45 @@ longitude = -73.984953
 Restaurants within a 500 meter radius were generated using Foursquare's API.
 
 This generated the following list of nearby restaurants:
+
 ![restaurant_list](rest_list.jpg)
 
-
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
+
+Let's map out the location of the 29 restaurants near the citizenM Hotel returned by our Foursquare query.
+```Python
+restaurants_map = folium.Map(location=[latitude, longitude], zoom_start=15) # generate map centred around the citizenM Hotel
+
+# add a red circle marker to represent the citizenM Hotel
+folium.features.CircleMarker(
+    [latitude, longitude],
+    radius=5,
+    color='red',
+    popup='citizenM Hotel',
+    fill = True,
+    fill_color = 'red',
+    fill_opacity = 0.6
+).add_to(restaurants_map)
+
+# add the restaurants as blue circle markers
+for lat, lng, name in zip(restaurants_filtered_df['lat'],restaurants_filtered_df['lng'],restaurants_filtered_df['name']):
+    label = '{}'.format(name)
+    label = folium.Popup(label, parse_html=True)
+    folium.CircleMarker(
+        [lat, lng],
+        radius=5,
+    popup=label,
+    color='yellow',
+    fill=True,
+    fill_color='red',
+    fill_opacity=0.7,
+    parse_html=False).add_to(restaurants_map)
+
+# display map
+restaurants_map
+```
+![restaurant_map](rest_map.jpg)
+**Restaurants within 500 meters of the citizenM Hotel, marked in red, returned by our Foursquare API query**
 ---
 ## 6. Conclusions and Findings <a name="conclusions"></a>
 
