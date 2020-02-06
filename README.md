@@ -123,7 +123,36 @@ LIMIT = 30
 ```
 
 ## 2. New York's Manhattan Borough Neighborhood Data <a name="borough-2"></a>
+
+Data for New York City's five boroughs and 306 neighborhoods were imported as a JSON file from 2014 data on NYU's website: https://geo.nyu.edu/catalog/nyu-2451-34572
+
+This data included latitude and longitude coordinates for each of the 306 neighborhoods in the dataset.
+
 ###  Map of Neighborhoods in the New York City' Five Boroughs <a name="borough-map"></a>
+
+A map was built in Folium using the NYU coordinate data:
+
+```Python
+# create map of New York using latitude and longitude values
+map_newyork = folium.Map(location=[latitude, longitude], zoom_start=10)
+
+# add markers to map
+for lat, lng, borough, neighborhood in zip(neighborhoods['Latitude'], neighborhoods['Longitude'], neighborhoods['Borough'], neighborhoods['Neighborhood']):
+    label = '{}, {}'.format(neighborhood, borough)
+    label = folium.Popup(label, parse_html=True)
+    folium.CircleMarker(
+        [lat, lng],
+        radius=5,
+        popup=label,
+        color='blue',
+        fill=True,
+        fill_color='#3186cc',
+        fill_opacity=0.7,
+        parse_html=False).add_to(map_newyork)  
+    
+map_newyork
+```
+
 ### Map of Neighborhoods in NYC's Manhattan Borough <a name="neighbor-map"></a>
 ## 3. Broadway Theatres and Current Productions <a name="broadway-3"></a>
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
