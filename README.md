@@ -367,10 +367,11 @@ Let's set our starting point at the Richard Rodgers Theatre where *Hamilton* is 
 
 This theatre is also located near the center of our cluster:
 
-![Richard Rodgers Theatre](RichardRodgersMap.jpg)
+![Richard Rodgers Theatre Map Detail](RichRogMap.jpg)
 
 **Google Maps street level view of the intersection of West 47th Street and 7th Avenue from the TKTS booth location**:
-![TKTS Booth View](TKTSView.jpg)
+
+![TKTS Booth View](TKTSview.jpg)
 ---
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
 ### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
