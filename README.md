@@ -374,7 +374,50 @@ This theatre is also located near the center of our cluster:
 ![TKTS Booth View](TKTSview.jpg)
 ---
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
+### Search with the Foursquare API for Hotels near the Richard Rodgers Theatre
+
+We will use the address of Richard Rodgers Theatre as our starting point as we look for nearby hotels using the Foursquare API.
+
+Let's get the hotel's latitude and longitude values.
 ### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
+```Python
+# Set address of Richard Rodgers Theatre as our starting point
+address = '226 West 46th Street, New York, NY'
+geolocator = Nominatim(user_agent="foursquare_agent")
+location = geolocator.geocode(address)
+latitude = location.latitude
+longitude = location.longitude
+print(latitude, longitude)
+```
+40.7590309 -73.98674788284762
+
+Next we queried Foursquare to view hotels within a given 500 meter radius of the Richard Rodgers Theatre.
+
+```Python
+search_query = 'Hotel'
+radius = 500
+print(search_query + ' .... OK!')
+```
+We build the URL to pass to the Foursquare API to get the hotels 
+```Python
+url = 'https://api.foursquare.com/v2/venues/search?client_id={}&client_secret={}&ll={},{}&v={}&query={}&radius={}&limit={}'.format(CLIENT_ID, CLIENT_SECRET, latitude, longitude, VERSION, search_query, radius, LIMIT)
+url
+```
+This query returns JSON data:
+```Python
+results = requests.get(url).json()
+results
+```
+![JSON Output](JSON.jpg)
+```Python
+# assign relevant part of JSON to venues
+venues = results['response']['venues']
+
+# tranform venues into a dataframe
+dataframe = json_normalize(venues)
+dataframe.head()
+```
+![JSON dataframe](JSON2.jpg)
 ---
 ## 5. Restaurants Near the Broadway Theatre District and citizenM Hotel <a name="restaurants-5"></a>
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
