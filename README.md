@@ -486,7 +486,38 @@ for lat, lng, label in zip(dataframe_filtered2['lat'], dataframe_filtered2['lng'
 map_hotels
 ```
 ![Hotel Map](hotels_map.jpg)
+**Map of Hotels Near the Richard Rodgers Theatre returned by searching for Hotels within a 500 meter radius**
 ---
+
+The hotel data was filtered by distance, and hotels were iteratively reviewed starting with the closest hotel, the Hotel Edison, then moving successively through the hotels in order of distance in meters from the Richard Rodgers Theatre.
+
+The user ratings and reviews from Foursquare and Google Reviews pointed to the citizenM Hotel as the best choice for our package. The location of the citizenM is noted in the map image above.
+
+Here is the Foursquare API processing for the citizenM Hotel:
+
+```Python
+venue_id = '5093c236830214706abb75db' # citizenM Hotel ID
+url = 'https://api.foursquare.com/v2/venues/{}?client_id={}&client_secret={}&v={}'.format(venue_id, CLIENT_ID, CLIENT_SECRET, VERSION) 
+```
+```Python
+result = requests.get(url).json()
+print(result['response']['venue'].keys())
+result['response']['venue']
+```
+
+```
+```Python
+```
+```
+```Python
+```
+```
+```Python
+```
+```
+```Python
+```
+
 ## 5. Restaurants Near the Broadway Theatre District and citizenM Hotel <a name="restaurants-5"></a>
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
 ---
