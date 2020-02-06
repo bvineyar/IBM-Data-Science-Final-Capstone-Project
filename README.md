@@ -550,7 +550,7 @@ This generated the following list of nearby restaurants:
 
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
 
-Let's map out the location of the 29 restaurants near the citizenM Hotel returned by our Foursquare query.
+Let's map out the location of the 30 restaurants near the citizenM Hotel returned by our Foursquare query.
 ```Python
 restaurants_map = folium.Map(location=[latitude, longitude], zoom_start=15) # generate map centred around the citizenM Hotel
 
@@ -583,12 +583,44 @@ for lat, lng, name in zip(restaurants_filtered_df['lat'],restaurants_filtered_df
 restaurants_map
 ```
 ![restaurant_map](rest_map.jpg)
-**Restaurants within 500 meters of the citizenM Hotel, marked in red, returned by our Foursquare API query**
+
+**Restaurants near the citizenM Hotel, marked in red, returned by Foursquare API**
+
+Now that we have some nearby restaurants we can build out the details of our tour package.
 ---
 ## 6. Conclusions and Findings <a name="conclusions"></a>
 
+We have researched the Broadway Theatre District in the Manhattan borough of New York City, and now have list of current shows and theatres where they are appearing.
 
+We also have a list of hotels near the Richard Rodgers Theatre where Hamilton is continuing it's long rung. From this list, we have a recommended hotel, the citizenM with a 9.2 rating from over 400 users.
 
+Finally, we have a list of restaurants close to our hotel we can build in our travel package.
+
+Here is a report on the findings.
+
+- [Current Broadway Productions and Associated Theatres](#current-productions)
+- [Recommended Hotel](#recommend-hotel)
+- [Nearby Restaurants](#nearby-rest)
+### Current Broadway Productions and Associated Theatres <a name="current-productions"></a>
+![Final_Theatre_List](final_theatre_list.jpg)
+
+### Recommended Hotel <a name="recommend-hotel"></a>
+
+The recommended hotel for our package is the 4-Star citizenM Hotel.
+
+![citizenM](citizenM.jpg)
+
+- **Address**: 218 W 50th St, New York, NY 10019
+- **Reviews**: 4.6 stars, with 1,587 reviews on Google.
+- **Room Rates**: as low as $169 a night
+- **Features**: In walking distance of many of the Broadway Theatres, this hotel has the following amenities:
+
+**From the citizenM website**:
+
+Located just off the corner of Broadway and 50th street, our New York hotel is right in the heart of Midtown Manhattan, smack bang in the middle of the Theater District. A 5 minute walk from 5th Avenue, Madison Avenue, Central Park and Columbus Circle, 10-15 minutes away from the major museums, Rockefeller Center and the Empire State Building, and an easy subway or cab ride to anywhere else in the city, from Soho to the Meatpacking District – so if you’re looking for the coolest hotels New York has to offer, check out citizenM.
+
+### Nearby Restaurants <a name="nearby-rest"></a>
+![Final_Restaurant_List](final_rest_list.jpg)
 ```
 ```Python
 ```
