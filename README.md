@@ -602,6 +602,7 @@ Here is a report on the findings.
 - [Recommended Hotel](#recommend-hotel)
 - [Nearby Restaurants](#nearby-rest)
 ### Current Broadway Productions and Associated Theatres <a name="current-productions"></a>
+
 ![Final_Theatre_List](final_theatre_list.jpg)
 
 ### Recommended Hotel <a name="recommend-hotel"></a>
@@ -620,12 +621,8 @@ The recommended hotel for our package is the 4-Star citizenM Hotel.
 Located just off the corner of Broadway and 50th street, our New York hotel is right in the heart of Midtown Manhattan, smack bang in the middle of the Theater District. A 5 minute walk from 5th Avenue, Madison Avenue, Central Park and Columbus Circle, 10-15 minutes away from the major museums, Rockefeller Center and the Empire State Building, and an easy subway or cab ride to anywhere else in the city, from Soho to the Meatpacking District – so if you’re looking for the coolest hotels New York has to offer, check out citizenM.
 
 ### Nearby Restaurants <a name="nearby-rest"></a>
+The following 30 restaurants are within walking distance of the citizenM Hotel:
 ![Final_Restaurant_List](final_rest_list.jpg)
-```
-```Python
-```
-```
-```Python
-```
+
 
 
