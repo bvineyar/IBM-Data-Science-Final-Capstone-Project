@@ -273,7 +273,7 @@ theatres_table = soup.find('table', {'class':'wikitable sortable'})
 theatres_table
 ```
 ```Python
-
+ 
 for tr in theatres_table.find_all('tr'):
     i = 0
     for td in tr.find_all('td'):
