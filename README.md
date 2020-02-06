@@ -355,6 +355,22 @@ map_broadway
 Here is a detailed view of the generated map, with theatre locations marked in purple:
 
 ![Broadway Theatres Map](theatre_map.jpg)
+**Map Showing Locations of 40 Broadway Theatres in Manhattan, New York City**
+
+#### Theatre Location Analysis ####
+
+Looking at the mapped results, we see that the greatest concentration of theatres appears clustered near 44th and 45th streets between 7th Avenue and 8th Avenue.
+
+This area is looking like a great spot to find local restaurants and hotels.
+
+Let's set our starting point at the Richard Rodgers Theatre where *Hamilton* is currently playing.
+
+This theatre is also located near the center of our cluster:
+
+![Richard Rodgers Theatre](RichardRodgersMap.jpg)
+
+**Google Maps street level view of the intersection of West 47th Street and 7th Avenue from the TKTS booth location**:
+![TKTS Booth View](TKTSView.jpg)
 ---
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
 ### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
