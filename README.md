@@ -241,13 +241,13 @@ Theatre_Data_df.drop(['OwnerOperator','Opening','Closing'],axis=1)
 ```
 The results at this stage looked like this:
 
-![TheatreTable2](theatre_table_2)
+![TheatreTable2](theatre_table_2.jpg)
 
 Next the data was downloaded to Excel, with more data cleaning for the address and show title fields. Also City, State, and Latitude and Longitude coordinates for the theatres was added.
 
 Here is a view of the final table:
 
-![TheatreTableFinal](theatre_table_final)
+![TheatreTableFinal](theatre_table_final.jpg)
 
 ```Python
 
