@@ -200,15 +200,6 @@ theatres_table = soup.find('table', {'class':'wikitable sortable'})
 theatres_table
 ```
 ```Python
-# Initialize values for dataframe fields
-Theatre = 0
-Address = 0
-Capacity = 0
-OwnerOperator = 0
-CurrentProduction = 0
-Type = 0
-Opening = 0
-Closing = 0
 
 for tr in theatres_table.find_all('tr'):
     i = 0
@@ -245,11 +236,10 @@ This returns data for 40 theatres with the current productions on Broadway.
 
 The data was then cleaned by removing some columns, such as City, State, OwnerOperator, Opening, and Closing.
 ```Python
-
+# Let's drop some of the columns that aren't needed
+Theatre_Data_df.drop(['OwnerOperator','Opening','Closing'],axis=1)
 ```
-
-
-Also the data was
+Next the data was downloaded 
 
 
 ```Python
