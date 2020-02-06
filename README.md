@@ -486,7 +486,7 @@ for lat, lng, label in zip(dataframe_filtered2['lat'], dataframe_filtered2['lng'
 map_hotels
 ```
 ![Hotel Map](hotels_map.jpg)
-**Map of Hotels Near the Richard Rodgers Theatre returned by searching for Hotels within a 500 meter radius**
+**Hotels near the Richard Rodgers Theatre within a 500 meter radius, with citizenM Hotel location highlighted**
 ---
 
 The hotel data was filtered by distance, and hotels were iteratively reviewed starting with the closest hotel, the Hotel Edison, then moving successively through the hotels in order of distance in meters from the Richard Rodgers Theatre.
