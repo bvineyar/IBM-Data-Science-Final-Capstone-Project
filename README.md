@@ -57,7 +57,7 @@ This project will use the following data:
  - **Reviews of Hotels and Restaurants in the Foursquare Dataset
   Source: Google Reviews, Hotels.com data
 
-##METHODOLOGY
+## METHODOLOGY
 
 The coordinates will be passed to the Foursquare Places API, for querying New York City neighborhoods for venues such as:
 
