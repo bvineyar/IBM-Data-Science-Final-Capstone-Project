@@ -185,6 +185,48 @@ Let's set our address in Nominatim for the TKTS ticket booth location get the co
 
 Let's draw a map using Folium, marking the TKTS booth near Times Square as a central location in the Theatre District, with green markers for the neighborhoods in Manhattan.
 
+```Python
+address = 'Broadway at, W 47th St, New York, NY 10036'
+
+geolocator = Nominatim(user_agent="ny_explorer")
+location = geolocator.geocode(address)
+latitude = 40.7591855
+longitude = -73.9848361
+print('The geograpical coordinates of the TKTS booth near Times Square are {}, {}.'.format(latitude, longitude))
+```
+The geograpical coordinates of the TKTS booth near Times Square are 40.7591855, -73.9848361.
+
+```Python
+# create map of the Theatre District in Manhattan using latitude and longitude values
+map_manhattan = folium.Map(location=[latitude, longitude], zoom_start=11)
+
+# add a red circle marker to represent the TKTS ticket booth
+folium.features.CircleMarker(
+    [latitude, longitude],
+    radius=5,
+    color='red',
+    popup='TKTS ticket booth in Times Square',
+    fill = True,
+    fill_color = 'red',
+    fill_opacity = 0.6
+).add_to(map_manhattan)
+
+# add markers to map
+for lat, lng, label in zip(manhattan_data['Latitude'], manhattan_data['Longitude'], manhattan_data['Neighborhood']):
+    label = folium.Popup(label, parse_html=True)
+    folium.CircleMarker(
+        [lat, lng],
+        radius=5,
+        popup=label,
+        color='green',
+        fill=True,
+        fill_color='#3186cc',
+        fill_opacity=0.7,
+        parse_html=False).add_to(map_manhattan)  
+    
+map_manhattan
+```
+![map of Manhattan Neighborhoods](manhattan_neighborhoods.jpg)
 ---
 ## 3. Broadway Theatres and Current Productions <a name="broadway-3"></a>
 ## Theatres on Broadway - Maps and Analysis ##
