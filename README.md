@@ -281,7 +281,9 @@ for lat, lng, label in zip(Theatre_Data_df4['Latitude'], Theatre_Data_df4['Longi
 
 map_broadway
 ```
-![Broadway Theatres Map](theatres.jpg)
+Here is a detailed view of the generated map, with theatre locations marked in purple:
+
+![Broadway Theatres Map](theatre_map.jpg)
 ---
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
 ### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
