@@ -446,6 +446,46 @@ dataframe_filtered2.columns = [column.split('.')[-1] for column in dataframe_fil
 dataframe_filtered2
 ```
 ![Hotels Dataframe Filtered](df_filtered.jpg)
+
+Viewing the data just on the name column:
+![Hotel Names](Hotel_names.jpg)
+
+Let's map out the hotels returned in our Foursquare search.
+
+### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
+
+First let's show a map of the hotel locations, so we can get a view of where they are in relation to the theatre.
+```Python
+# create map of Manhattan using latitude and longitude values
+map_hotels = folium.Map(location=[latitude, longitude], zoom_start=15)
+
+# add a red circle marker to represent the Midtown Manhattan neighborhood center
+folium.features.CircleMarker(
+    [latitude, longitude],
+    radius=5,
+    color='red',
+    popup='Richard Rodgers Theatre - Home of Hamilton',
+    fill = True,
+    fill_color = 'red',
+    fill_opacity = 0.6
+).add_to(map_hotels)
+
+# add markers to map
+for lat, lng, label in zip(dataframe_filtered2['lat'], dataframe_filtered2['lng'], dataframe_filtered2['name']):
+    label = folium.Popup(label, parse_html=True)
+    folium.CircleMarker(
+        [lat, lng],
+        radius=5,
+        popup=label,
+        color='purple',
+        fill=True,
+        fill_color='purple',
+        fill_opacity=0.5,
+        parse_html=False).add_to(map_hotels)  
+    
+map_hotels
+```
+![Hotel Map](Hotels_map.jpg)
 ---
 ## 5. Restaurants Near the Broadway Theatre District and citizenM Hotel <a name="restaurants-5"></a>
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
