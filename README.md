@@ -249,9 +249,39 @@ Here is a view of the final table:
 
 ![TheatreTableFinal](theatre_table_final.jpg)
 
-```Python
+### Map of Broadway Theatre Locations <a name="broadway-map"></a>
 
+The next step was to map out the theatre locations using Folium.
+
+```Python
+# Setting the latitude and longitude of Broadway
+broadway_latitude = 40.75659 # neighborhood latitude value
+broadway_longitude = -73.98626, # neighborhood longitude value
+neighborhood_name = 'Broadway'
+print('Latitude and longitude values of {} are {}, {}.'.format(neighborhood_name, 
+                                                               broadway_latitude, 
+                                                               broadway_longitude))
 ```
+```Python
+# create map of the Broadway theatre district using latitude and longitude values
+map_broadway = folium.Map(location=[broadway_latitude, broadway_longitude], zoom_start=14)
+
+# add markers to map
+for lat, lng, label in zip(Theatre_Data_df4['Latitude'], Theatre_Data_df4['Longitude'], Theatre_Data_df4['Theatre']):
+    label = folium.Popup(label, parse_html=True)
+    folium.CircleMarker(
+        [lat, lng],
+        radius=5,
+        popup=label,
+        color='black',
+        fill=True,
+        fill_color='purple',
+        fill_opacity=0.7,
+        parse_html=False).add_to(map_broadway) 
+
+map_broadway
+```
+![Broadway Theatres Map](theatres.jpg)
 ---
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
 ### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
