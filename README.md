@@ -157,6 +157,33 @@ map_newyork
 
 ### Map of Neighborhoods in NYC's Manhattan Borough <a name="neighbor-map"></a>
 ![Map of Neighborhoods in NYC](NewYorkNeighborhoods.jpg)
+
+New York City has five boroughs:
+    
+    - Manhattan
+    - The Bronx
+    - Brooklyn
+    - Queens
+    - Staten Island
+    
+This project is focused on neighborhoods in Manhattan, as this is where Broadway's Theatre District is located.
+
+Manhattan data was filtered and built into a new dataframe for that borough.
+
+```Python
+manhattan_data_df = neighborhoods[neighborhoods['Borough'] == 'Manhattan'].reset_index(drop=True)
+```
+Here is the generated dataframe showing 40 Manhattan neighborhoods:
+![Manhattan Neighborhoods](manhattan_table.jpg)
+
+### Build map of Manhattan neighborhoods from latitude and longitude coordinates ###
+
+Close to Times Square, there is a TKTS ticket booth that sells ticket to all the Broadway shows.
+
+Let's set our address in Nominatim for the TKTS ticket booth location get the coordinates.
+
+Let's draw a map using Folium, marking the TKTS booth near Times Square as a central location in the Theatre District, with green markers for the neighborhoods in Manhattan.
+
 ---
 ## 3. Broadway Theatres and Current Productions <a name="broadway-3"></a>
 ## Theatres on Broadway - Maps and Analysis ##
