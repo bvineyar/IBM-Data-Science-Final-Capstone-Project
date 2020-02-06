@@ -241,11 +241,20 @@ for tr in theatres_table.find_all('tr'):
 ```
 This returns data for 40 theatres with the current productions on Broadway.
 
+![TheatreTable](theatretable.jpg)
 
+The data was then cleaned by removing some columns, such as City, State, OwnerOperator, Opening, and Closing.
 ```Python
 
 ```
 
+
+Also the data was
+
+
+```Python
+
+```
 
 ## 4. Hotels Near the Broadway Theatre District <a name="hotels-4"></a>
 ### Map of Hotels Near Broadway Theatres <a name="hotels-map"></a>
