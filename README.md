@@ -230,7 +230,7 @@ map_manhattan
 ```
 ![map of Manhattan Neighborhoods](manhattan_neighborhoods.jpg)
 
-**Manhattan's 40 neighborhoods, with TKTS booth near Times Square marked in red.**
+**Manhattan's 40 neighborhoods, with Broadway's TKTS booth near Times Square marked in red.**
 
 ---
 ## 3. Broadway Theatres and Current Productions <a name="broadway-3"></a>
@@ -491,7 +491,7 @@ map_hotels
 ```
 ![Hotel Map](hotels_map.jpg)
 
-**Hotels near Richard Rodgers Theatre (Hamilton) with 4-Star citizenM Hotel shown**
+**Hotels near Richard Rodgers Theatre (Hamilton) with 4-Star citizenM Hotel location shown**
 
 ---
 
@@ -526,22 +526,39 @@ Further analysis revealed this 9.2 score for the citizenM Hotel was based on 412
 There were also 83 tips for the hotel in Foursquare, but due to limitations on the free Foursquare Developer account used for testing, the details for only a single tip can be returned and viewed.
 
 ![citizenM_tip](tip.jpg)
-```
-```Python
-```
-```
-```Python
-```
-```
-```Python
-```
 
+---
 ## 5. Restaurants Near the Broadway Theatre District and citizenM Hotel <a name="restaurants-5"></a>
+
+Now that we have a great hotel for our package, the final step is to find nearby restaurants using the Foursquare API.
+
+We can provide a list as suggestions for travelers.
+
+No single venue was selected as the best, however, as we want to give our customers a wide range of choices based on their tastes.
+
+First, we set our search coordinates for the hotel's location.
+```Python
+# Latitude and Longitude of citizenM Hotel
+latitude = 40.761691
+longitude = -73.984953
+```
+Restaurants within a 500 meter radius were generated using Foursquare's API.
+
+This generated the following list of nearby restaurants:
+![restaurant_list](rest_list.jpg)
+
+
 ### Map of Restaurants Near the Broadway Theatre District <a name="rest-map"></a>
 ---
 ## 6. Conclusions and Findings <a name="conclusions"></a>
 
 
 
+```
+```Python
+```
+```
+```Python
+```
 
 
