@@ -157,6 +157,7 @@ map_newyork
 
 ### Map of Neighborhoods in NYC's Manhattan Borough <a name="neighbor-map"></a>
 ![Map of Neighborhoods in NYC](NewYorkNeighborhoods.jpg)
+**Folium Map of New York City's 306 neighborhoods**
 
 New York City has five boroughs:
     
@@ -486,7 +487,8 @@ for lat, lng, label in zip(dataframe_filtered2['lat'], dataframe_filtered2['lng'
 map_hotels
 ```
 ![Hotel Map](hotels_map.jpg)
-**Hotels near the Richard Rodgers Theatre (Hamilton) with 4-Star citizenM Hotel location highlighted**
+
+**Hotels near the Richard Rodgers Theatre (Hamilton) with 4-Star citizenM Hotel shown**
 ---
 
 The hotel data was filtered by distance, and hotels were iteratively reviewed starting with the closest hotel, the Hotel Edison, then moving successively through the hotels in order of distance in meters from the Richard Rodgers Theatre.
