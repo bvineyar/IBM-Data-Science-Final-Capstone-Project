@@ -174,6 +174,7 @@ Manhattan data was filtered and built into a new dataframe for that borough.
 manhattan_data_df = neighborhoods[neighborhoods['Borough'] == 'Manhattan'].reset_index(drop=True)
 ```
 Here is the generated dataframe showing 40 Manhattan neighborhoods:
+
 ![Manhattan Neighborhoods](manhattan_table.jpg)
 
 ### Build map of Manhattan neighborhoods from latitude and longitude coordinates ###
