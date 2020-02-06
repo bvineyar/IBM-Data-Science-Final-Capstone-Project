@@ -87,6 +87,31 @@ The coordinates will be passed to the Foursquare Places API, for querying New Yo
  
 ## 1. Import Libraries, Foursquare Credentials, and Neighborhood Data <a name="import-1"></a>
 
+The first step in the project was to import libraries:
+
+```python
+import numpy as np # library to handle data in a vectorized manner
+import pandas as pd # library for data analsysis
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+
+import json # library to handle JSON files
+import pickle
+
+from geopy.geocoders import Nominatim # Convert addresses into GPS coordinates
+from bs4 import BeautifulSoup
+
+import requests # library to handle requests
+```
+from pandas.io.json import json_normalize # transform JSON file into a Pandas dataframe
+# Matplotlib and associated plotting modules
+import matplotlib.cm as cm
+import matplotlib.colors as colors
+# import k-means from clustering stage
+from sklearn.cluster import KMeans
+
+import folium # map rendering library
+print('Libraries imported.')
 
 
 ## 2. New York's Manhattan Borough Neighborhood Data <a name="borough-2"></a>
