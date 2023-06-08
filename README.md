@@ -592,7 +592,7 @@ Now that we have some nearby restaurants we can build out the details of our tou
 
 We have researched the Broadway Theatre District in the Manhattan borough of New York City, and now have list of current shows and theatres where they are appearing.
 
-We also have a list of hotels near the Richard Rodgers Theatre where Hamilton is continuing it's long rung. From this list, we have a recommended hotel, the citizenM with a 9.2 rating from over 400 users.
+We also have a list of hotels near the Richard Rodgers Theatre where Hamilton is continuing it's long run. From this list, we have a recommended hotel, the citizenM with a 9.2 rating from over 400 users.
 
 Finally, we have a list of restaurants close to our hotel we can build in our travel package.
 
