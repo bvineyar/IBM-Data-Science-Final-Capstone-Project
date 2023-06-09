@@ -93,7 +93,7 @@ The first step in the project was to import libraries:
 
 ```python
 import numpy as np # library to handle data in a vectorized manner
-import pandas as pd # library for data analsysis
+import pandas as pd # library for loading data into dataframes
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 import json # library to handle JSON files
