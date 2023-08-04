@@ -183,7 +183,7 @@ Here is the generated dataframe showing 40 Manhattan neighborhoods:
 
 Close to Times Square, there is a TKTS ticket booth that sells tickets to all the Broadway shows.
 
-Let's set our address in Nominatim for the TKTS ticket booth location get the coordinates.
+Let's set our address in Nominatim for the TKTS ticket booth location and get the coordinates.
 
 Let's draw a map using Folium, marking the TKTS booth near Times Square as a central location in the Theatre District, with green markers for the neighborhoods in Manhattan.
 
