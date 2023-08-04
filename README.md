@@ -181,7 +181,7 @@ Here is the generated dataframe showing 40 Manhattan neighborhoods:
 
 ### Build map of Manhattan neighborhoods from latitude and longitude coordinates ###
 
-Close to Times Square, there is a TKTS ticket booth that sells ticket to all the Broadway shows.
+Close to Times Square, there is a TKTS ticket booth that sells tickets to all the Broadway shows.
 
 Let's set our address in Nominatim for the TKTS ticket booth location get the coordinates.
 
