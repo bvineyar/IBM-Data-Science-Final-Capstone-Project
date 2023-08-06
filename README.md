@@ -52,9 +52,9 @@ This project will use the following data:
   Source: 2014 New York City Neighborhood Names: https://geo.nyu.edu/catalog/nyu-2451-34572
 - **Broadway Theatre Wiki with Current Shows in Production**
   Source: https://en.wikipedia.org/wiki/Broadway_theatre
-- **Hotels and Restaurants near the Richard Rodgers Theatre - (where *Hamilton* is playing)
+- **Hotels and Restaurants near the Richard Rodgers Theatre - (where *Hamilton* is playing)**
   Source: API Queries of Foursquare 
- - **Reviews of Hotels and Restaurants in the Foursquare Dataset
+ - **Reviews of Hotels and Restaurants in the Foursquare Dataset**
   Source: Google Reviews, Hotels.com data
 
 ## METHODOLOGY
