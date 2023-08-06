@@ -452,6 +452,7 @@ dataframe_filtered2
 ![Hotels Dataframe Filtered](df_filtered.jpg)
 
 Viewing the data just on the name column:
+
 ![Hotel Names](Hotel_names.jpg)
 
 Let's map out the hotels returned in our Foursquare search.
