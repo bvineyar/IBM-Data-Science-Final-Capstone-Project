@@ -18,7 +18,7 @@ This project involved the use of Python 3 and Jupyter Notebooks. Tools used incl
 
 Their clients are mostly interested in Broadway musicals and plays, so this project will focus on finding the best hotel and restaurants near the Broadway theater district.
 
-![Broadway](77.jpg)
+![Broadway](/assets/images/77.jpg)
 
 **Key Questions to Answer**
 
